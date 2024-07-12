@@ -8,11 +8,11 @@ class Ccwc
     when '-l'
       "#{get_number_of_lines()} #{file_path}"
     when '-w'
-    "#{get_numer_of_words()} #{file_path}"
+    "#{get_number_of_words()} #{file_path}"
     when '-m'
-    "#{get_numer_of_characters()} #{file_path}"
+    "#{get_number_of_characters()} #{file_path}"
     when nil
-      "#{get_bytes()} #{get_number_of_lines()} #{get_numer_of_words()} #{get_numer_of_characters()} #{file_path}"
+      "#{get_bytes()} #{get_number_of_lines()} #{get_number_of_words()} #{get_number_of_characters()} #{file_path}"
     else
       raise "Invalid option"
     end
@@ -36,11 +36,11 @@ class Ccwc
     @file_data.split("\n").length
   end
 
-  def get_numer_of_words
+  def get_number_of_words
     @file_data.split(" ").length
   end
 
-  def get_numer_of_characters
+  def get_number_of_characters
     @file_data.size
   end
 
