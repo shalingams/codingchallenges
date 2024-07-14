@@ -47,5 +47,9 @@ def __get_number_of_words(f):
 def __get_number_of_characters(f):
   number_of_characters = 0
   with open(f, 'r') as f:
-    number_of_characters
+    for line in f:
+      for letter in line:
+        for i in letter:
+          if(i !=" " and i !="\n"):
+            number_of_characters += 1
   return number_of_characters
